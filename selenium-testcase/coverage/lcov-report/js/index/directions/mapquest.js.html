@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/index/directions/mapquest.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">js/index/directions/</a> mapquest.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// For docs, see:
+// http://developer.mapquest.com/web/products/open/directions-service
+// http://open.mapquestapi.com/directions/
+// https://github.com/apmon/openstreetmap-website/blob/21edc353a4558006f0ce23f5ec3930be6a7d4c8b/app/controllers/routing_controller.rb#L153
+&nbsp;
+<span class="fstat-no" title="function not covered" >function MapQuestEngine(id, routeType) {</span>
+<span class="cstat-no" title="statement not covered" >  var MQ_SPRITE_MAP = {</span>
+    0: 0, // straight
+    1: 1, // slight right
+    2: 2, // right
+    3: 3, // sharp right
+    4: 4, // reverse
+    5: 7, // sharp left
+    6: 6, // left
+    7: 5, // slight left
+    8: 4, // right U-turn
+    9: 4, // left U-turn
+    10: 21, // right merge
+    11: 20, // left merge
+    12: 21, // right on-ramp
+    13: 20, // left on-ramp
+    14: 24, // right off-ramp
+    15: 25, // left off-ramp
+    16: 18, // right fork
+    17: 19, // left fork
+    18: 0  // straight fork
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    id: id,
+    creditline: '&lt;a href="http://www.mapquest.com/" target="_blank"&gt;MapQuest&lt;/a&gt; &lt;img src="' + document.location.protocol + '//developer.mapquest.com/content/osm/mq_logo.png"&gt;',
+    draggable: false,
+&nbsp;
+    getRoute: <span class="fstat-no" title="function not covered" >function (points, callback) {</span>
+<span class="cstat-no" title="statement not covered" >      var from = points[0];</span>
+<span class="cstat-no" title="statement not covered" >      var to = points[points.length - 1];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return $.ajax({</span>
+        url: document.location.protocol + OSM.MAPQUEST_DIRECTIONS_URL,
+        data: {
+          key: OSM.MAPQUEST_KEY,
+          from: from.lat + "," + from.lng,
+          to: to.lat + "," + to.lng,
+          routeType: routeType,
+          // locale: I18n.currentLocale(), //Doesn't actually work. MapQuest requires full locale e.g. "de_DE", but I18n may only provides language, e.g. "de"
+          manMaps: false,
+          shapeFormat: "raw",
+          generalize: 0,
+          unit: "k"
+        },
+        dataType: "jsonp",
+        success: <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >          if (data.info.statuscode !== 0)</span>
+<span class="cstat-no" title="statement not covered" >            return callback(true);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          var i;</span>
+<span class="cstat-no" title="statement not covered" >          var line = [];</span>
+<span class="cstat-no" title="statement not covered" >          var shape = data.route.shape.shapePoints;</span>
+<span class="cstat-no" title="statement not covered" >          for (i = 0; i &lt; shape.length; i += 2) {</span>
+<span class="cstat-no" title="statement not covered" >            line.push(L.latLng(shape[i], shape[i + 1]));</span>
+          }
+&nbsp;
+          // data.route.shape.maneuverIndexes links turns to polyline positions
+          // data.route.legs[0].maneuvers is list of turns
+<span class="cstat-no" title="statement not covered" >          var steps = [];</span>
+<span class="cstat-no" title="statement not covered" >          var mq = data.route.legs[0].maneuvers;</span>
+<span class="cstat-no" title="statement not covered" >          for (i = 0; i &lt; mq.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            var s = mq[i];</span>
+<span class="cstat-no" title="statement not covered" >            var d;</span>
+<span class="cstat-no" title="statement not covered" >            var linesegstart, linesegend, lineseg;</span>
+<span class="cstat-no" title="statement not covered" >            linesegstart = data.route.shape.maneuverIndexes[i];</span>
+<span class="cstat-no" title="statement not covered" >            if (i === mq.length - 1) {</span>
+<span class="cstat-no" title="statement not covered" >              d = 15;</span>
+<span class="cstat-no" title="statement not covered" >              linesegend = linesegstart + 1;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >              d = MQ_SPRITE_MAP[s.turnType];</span>
+<span class="cstat-no" title="statement not covered" >              linesegend = data.route.shape.maneuverIndexes[i + 1] + 1;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            lineseg = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var j = linesegstart; j &lt; linesegend; j++) {</span>
+<span class="cstat-no" title="statement not covered" >              lineseg.push(L.latLng(data.route.shape.shapePoints[j * 2], data.route.shape.shapePoints[j * 2 + 1]));</span>
+            }
+<span class="cstat-no" title="statement not covered" >            steps.push([L.latLng(s.startPoint.lat, s.startPoint.lng), d, s.narrative, s.distance * 1000, lineseg]);</span>
+          }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          callback(false, {</span>
+            line: line,
+            steps: steps,
+            distance: data.route.distance * 1000,
+            time: data.route.time
+          });
+        },
+        error: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >          callback(true);</span>
+        }
+      });
+    }
+  };
+}
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (OSM.MAPQUEST_KEY) {
+<span class="cstat-no" title="statement not covered" >  OSM.Directions.addEngine(new MapQuestEngine("mapquest_bicycle", "bicycle"), true);</span>
+<span class="cstat-no" title="statement not covered" >  OSM.Directions.addEngine(new MapQuestEngine("mapquest_foot", "pedestrian"), true);</span>
+<span class="cstat-no" title="statement not covered" >  OSM.Directions.addEngine(new MapQuestEngine("mapquest_car", "fastest"), true);</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Nov 18 2016 18:18:38 GMT-0800 (PST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

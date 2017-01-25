@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/router.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">js/</a> router.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.89% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>61/94</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.88% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>19/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">67.82% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>59/87</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">150×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">71×</span>
+<span class="cline-any cline-yes">71×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+  OSM.Router implements pushState-based navigation for the main page and
+  other pages that use a sidebar+map based layout (export, search results,
+  history, and browse pages).
+&nbsp;
+  For browsers without pushState, it falls back to full page loads, which all
+  of the above pages support.
+&nbsp;
+  The router is initialized with a set of routes: a mapping of URL path templates
+  to route controller objects. Path templates can contain placeholders
+  (`/note/:id`) and optional segments (`/:type/:id(/history)`).
+&nbsp;
+  Route controller objects can define four methods that are called at defined
+  times during routing:
+&nbsp;
+     * The `load` method is called by the router when a path which matches the
+       route's path template is loaded via a normal full page load. It is passed
+       as arguments the URL path plus any matching arguments for placeholders
+       in the path template.
+&nbsp;
+     * The `pushstate` method is called when a page which matches the route's path
+       template is loaded via pushState. It is passed the same arguments as `load`.
+&nbsp;
+     * The `popstate` method is called when returning to a previously
+       pushState-loaded page via popstate (i.e. browser back/forward buttons).
+&nbsp;
+     * The `unload` method is called on the exiting route controller when navigating
+       via pushState or popstate to another route.
+&nbsp;
+   Note that while `load` is not called by the router for pushState-based loads,
+   it's frequently useful for route controllers to call it manually inside their
+   definition of the `pushstate` and `popstate` methods.
+&nbsp;
+   An instance of OSM.Router is assigned to `OSM.router`. To navigate to a new page
+   via pushState (with automatic full-page load fallback), call `OSM.router.route`:
+&nbsp;
+       OSM.router.route('/way/1234');
+&nbsp;
+   If `route` is passed a path that matches one of the path templates, it performs
+   the appropriate actions and returns true. Otherwise it returns false.
+&nbsp;
+   OSM.Router also handles updating the hash portion of the URL containing transient
+   map state such as the position and zoom level. Some route controllers may wish to
+   temporarily suppress updating the hash (for example, to omit the hash on pages
+   such as `/way/1234` unless the map is moved). This can be done by using
+   `OSM.router.withoutMoveListener` to run a block of code that may update
+   move the map without the hash changing.
+ */
+OSM.Router = function(map, rts) {
+  var escapeRegExp  = /[\-{}\[\]+?.,\\\^$|#\s]/g;
+  var optionalParam = /\((.*?)\)/g;
+  var namedParam    = /(\(\?)?:\w+/g;
+  var splatParam    = /\*\w+/g;
+&nbsp;
+  function Route(path, controller) {
+    var regexp = new RegExp('^' +
+      path.replace(escapeRegExp, '\\$&amp;')
+        .replace(optionalParam, '(?:$1)?')
+        .replace(namedParam, function(match, optional){
+          return optional ? <span class="branch-0 cbranch-no" title="branch not covered" >match </span>: '([^\/]+)';
+        })
+        .replace(splatParam, '(.*?)') + '(?:\\?.*)?$');
+&nbsp;
+    var route = {};
+&nbsp;
+    route.match = function(path) {
+      return regexp.test(path);
+    };
+&nbsp;
+    route.run = function(action, path) {
+      var params = [];
+&nbsp;
+      if (path) {
+        params = regexp.exec(path).map(function(param, i) {
+          return (i &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >param)</span> ? <span class="branch-0 cbranch-no" title="branch not covered" >decodeURIComponent(param) </span>: param;
+        });
+      }
+&nbsp;
+      params = params.concat(Array.prototype.slice.call(arguments, 2));
+&nbsp;
+      return (controller[action] || $.noop).apply(controller, params);
+    };
+&nbsp;
+    return route;
+  }
+&nbsp;
+  var routes = [];
+  for (var r in rts)
+    routes.push(new Route(r, rts[r]));
+&nbsp;
+  routes.recognize = function(path) {
+    for (var i = 0; i &lt; this.length; i++) {
+      if (this[i].match(path)) return this[i];
+    }
+  };
+&nbsp;
+  var currentPath = window.location.pathname.replace(/(.)\/$/, '$1') + window.location.search,
+    currentRoute = routes.recognize(currentPath),
+    currentHash = location.hash || OSM.formatHash(map);
+&nbsp;
+  var router = {};
+&nbsp;
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (window.history &amp;&amp; window.history.pushState) {
+    $(window).on('popstate', <span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >      if (!e.originalEvent.state) <span class="cstat-no" title="statement not covered" >return; </span></span>// Is it a real popstate event or just a hash change?
+<span class="cstat-no" title="statement not covered" >      var path = window.location.pathname + window.location.search,</span>
+        route = routes.recognize(path);
+<span class="cstat-no" title="statement not covered" >      if (path === currentPath) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >      currentRoute.run('unload', null, route === currentRoute);</span>
+<span class="cstat-no" title="statement not covered" >      currentPath = path;</span>
+<span class="cstat-no" title="statement not covered" >      currentRoute = route;</span>
+<span class="cstat-no" title="statement not covered" >      currentRoute.run('popstate', currentPath);</span>
+<span class="cstat-no" title="statement not covered" >      map.setState(e.originalEvent.state, {animate: false});</span>
+    });
+&nbsp;
+    router.route = function (url) {
+      var path = url.replace(/#.*/, ''),
+        route = routes.recognize(path);
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!route) <span class="cstat-no" title="statement not covered" >return false;</span>
+      currentRoute.run('unload', null, route === currentRoute);
+      var state = OSM.parseHash(url);
+      map.setState(state);
+      window.history.pushState(state, document.title, url);
+      currentPath = path;
+      currentRoute = route;
+      currentRoute.run('pushstate', currentPath);
+      return true;
+    };
+&nbsp;
+    router.replace = <span class="fstat-no" title="function not covered" >function (url) {</span>
+<span class="cstat-no" title="statement not covered" >      window.history.replaceState(OSM.parseHash(url), document.title, url);</span>
+    };
+&nbsp;
+    router.stateChange = function(state) {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (state.center) {
+        window.history.replaceState(state, document.title, OSM.formatHash(state));
+      } else {
+<span class="cstat-no" title="statement not covered" >        window.history.replaceState(state, document.title, window.location);</span>
+      }
+    };
+  } else {
+<span class="cstat-no" title="statement not covered" >    router.route = router.replace = <span class="fstat-no" title="function not covered" >function (url) {</span></span>
+<span class="cstat-no" title="statement not covered" >      window.location.assign(url);</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    router.stateChange = <span class="fstat-no" title="function not covered" >function(state) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (state.center) <span class="cstat-no" title="statement not covered" >window.location.replace(OSM.formatHash(state));</span></span>
+    };
+  }
+&nbsp;
+  router.updateHash = function() {
+    var hash = OSM.formatHash(map);
+    if (hash === currentHash) return;
+    currentHash = hash;
+    router.stateChange(OSM.parseHash(hash));
+  };
+&nbsp;
+  router.hashUpdated = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    var hash = location.hash;</span>
+<span class="cstat-no" title="statement not covered" >    if (hash === currentHash) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >    currentHash = hash;</span>
+<span class="cstat-no" title="statement not covered" >    var state = OSM.parseHash(hash);</span>
+<span class="cstat-no" title="statement not covered" >    map.setState(state);</span>
+<span class="cstat-no" title="statement not covered" >    router.stateChange(state, hash);</span>
+  };
+&nbsp;
+  router.withoutMoveListener = <span class="fstat-no" title="function not covered" >function (callback) {</span>
+<span class="fstat-no" title="function not covered" >    function disableMoveListener() {</span>
+<span class="cstat-no" title="statement not covered" >      map.off('moveend', router.updateHash);</span>
+<span class="cstat-no" title="statement not covered" >      map.once('moveend', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        map.on('moveend', router.updateHash);</span>
+      });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    map.once('movestart', disableMoveListener);</span>
+<span class="cstat-no" title="statement not covered" >    callback();</span>
+<span class="cstat-no" title="statement not covered" >    map.off('movestart', disableMoveListener);</span>
+  };
+&nbsp;
+  router.load = function() {
+    var loadState = currentRoute.run('load', currentPath);
+    router.stateChange(loadState || <span class="branch-1 cbranch-no" title="branch not covered" >{})</span>;
+  };
+&nbsp;
+  router.setCurrentPath = <span class="fstat-no" title="function not covered" >function (path) {</span>
+<span class="cstat-no" title="statement not covered" >    currentPath = path;</span>
+<span class="cstat-no" title="statement not covered" >    currentRoute = routes.recognize(currentPath);</span>
+  };
+&nbsp;
+  map.on('moveend baselayerchange overlaylayerchange', router.updateHash);
+  $(window).on('hashchange', router.hashUpdated);
+&nbsp;
+  return router;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Nov 18 2016 18:18:38 GMT-0800 (PST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

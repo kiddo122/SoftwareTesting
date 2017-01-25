@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/index/search.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">js/index/</a> search.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.02% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>32/82</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.32% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.51% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/81</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//= require jquery.simulate
+&nbsp;
+OSM.Search = function(map) {
+  $(".search_form input[name=query]").on("input", function(e) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ($(e.target).val() === "") {
+<span class="cstat-no" title="statement not covered" >      $(".describe_location").fadeIn(100);</span>
+    } else {
+      $(".describe_location").fadeOut(100);
+    }
+  });
+&nbsp;
+  $(".search_form a.button.switch_link").on("click", function(e) {
+    e.preventDefault();
+    var query = $(e.target).parent().parent().find("input[name=query]").val();
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (query) {
+<span class="cstat-no" title="statement not covered" >      OSM.router.route("/directions?from=" + encodeURIComponent(query) + OSM.formatHash(map));</span>
+    } else {
+      OSM.router.route("/directions" + OSM.formatHash(map));
+    }
+  });
+&nbsp;
+  $(".search_form").on("submit", function(e) {
+    e.preventDefault();
+    $("header").addClass("closed");
+    var query = $(this).find("input[name=query]").val();
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (query) {
+      OSM.router.route("/search?query=" + encodeURIComponent(query) + OSM.formatHash(map));
+    } else {
+<span class="cstat-no" title="statement not covered" >      OSM.router.route("/" + OSM.formatHash(map));</span>
+    }
+  });
+&nbsp;
+  $(".describe_location").on("click", <span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >    var center = map.getCenter().wrap(),</span>
+      precision = OSM.zoomPrecision(map.getZoom());
+<span class="cstat-no" title="statement not covered" >    OSM.router.route("/search?query=" + encodeURIComponent(</span>
+      center.lat.toFixed(precision) + "," + center.lng.toFixed(precision)
+    ));
+  });
+&nbsp;
+  $("#sidebar_content")
+    .on("click", ".search_more a", clickSearchMore)
+    .on("click", ".search_results_entry a.set_position", clickSearchResult)
+    .on("mouseover", "p.search_results_entry:has(a.set_position)", showSearchResult)
+    .on("mouseout", "p.search_results_entry:has(a.set_position)", hideSearchResult)
+    .on("mousedown", "p.search_results_entry:has(a.set_position)", <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >      var moved = false;</span>
+<span class="cstat-no" title="statement not covered" >      $(this).one("click", <span class="fstat-no" title="function not covered" >function (e) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (!moved &amp;&amp; !$(e.target).is('a')) {</span>
+<span class="cstat-no" title="statement not covered" >          $(this).find("a.set_position").simulate("click", e);</span>
+        }
+      }).one("mousemove", <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        moved = true;</span>
+      });
+    });
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function clickSearchMore(e) {</span>
+<span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >    e.stopPropagation();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var div = $(this).parents(".search_more");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $(this).hide();</span>
+<span class="cstat-no" title="statement not covered" >    div.find(".loader").show();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $.get($(this).attr("href"), <span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >      div.replaceWith(data);</span>
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function showSearchResult() {</span>
+<span class="cstat-no" title="statement not covered" >    var marker = $(this).data("marker");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!marker) {</span>
+<span class="cstat-no" title="statement not covered" >      var data = $(this).find("a.set_position").data();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      marker = L.marker([data.lat, data.lon], {icon: OSM.getUserIcon()});</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      $(this).data("marker", marker);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    markers.addLayer(marker);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $(this).closest("li").addClass("selected");</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function hideSearchResult() {</span>
+<span class="cstat-no" title="statement not covered" >    var marker = $(this).data("marker");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (marker) {</span>
+<span class="cstat-no" title="statement not covered" >      markers.removeLayer(marker);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $(this).closest("li").removeClass("selected");</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function panToSearchResult(data) {</span>
+<span class="cstat-no" title="statement not covered" >    if (data.minLon &amp;&amp; data.minLat &amp;&amp; data.maxLon &amp;&amp; data.maxLat) {</span>
+<span class="cstat-no" title="statement not covered" >      map.fitBounds([[data.minLat, data.minLon], [data.maxLat, data.maxLon]]);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      map.setView([data.lat, data.lon], data.zoom);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function clickSearchResult(e) {</span>
+<span class="cstat-no" title="statement not covered" >    var data = $(this).data();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    panToSearchResult(data);</span>
+&nbsp;
+    // Let clicks to object browser links propagate.
+<span class="cstat-no" title="statement not covered" >    if (data.type &amp;&amp; data.id) <span class="cstat-no" title="statement not covered" >return;</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >    e.stopPropagation();</span>
+  }
+&nbsp;
+  var markers = L.layerGroup().addTo(map);
+&nbsp;
+  var page = {};
+&nbsp;
+  page.pushstate = page.popstate = function(path) {
+    var params = querystring.parse(path.substring(path.indexOf('?') + 1));
+    $(".search_form input[name=query]").val(params.query);
+    $(".describe_location").hide();
+    OSM.loadSidebarContent(path, page.load);
+  };
+&nbsp;
+  page.load = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    $(".search_results_entry").each(<span class="fstat-no" title="function not covered" >function(index) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var entry = $(this);</span>
+<span class="cstat-no" title="statement not covered" >      $.ajax({</span>
+        url: entry.data("href"),
+        method: 'GET',
+        data: {
+          zoom: map.getZoom(),
+          minlon: map.getBounds().getWest(),
+          minlat: map.getBounds().getSouth(),
+          maxlon: map.getBounds().getEast(),
+          maxlat: map.getBounds().getNorth()
+        },
+        success: <span class="fstat-no" title="function not covered" >function(html) {</span>
+<span class="cstat-no" title="statement not covered" >          entry.html(html);</span>
+          // go to first result of first geocoder
+<span class="cstat-no" title="statement not covered" >          if (index === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            var firstResult = entry.find('*[data-lat][data-lon]:first').first();</span>
+<span class="cstat-no" title="statement not covered" >            if (firstResult.length) {</span>
+<span class="cstat-no" title="statement not covered" >              panToSearchResult(firstResult.data());</span>
+            }
+          }
+        }
+      });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return map.getState();</span>
+  };
+&nbsp;
+  page.unload = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    markers.clearLayers();</span>
+<span class="cstat-no" title="statement not covered" >    $(".search_form input[name=query]").val("");</span>
+<span class="cstat-no" title="statement not covered" >    $(".describe_location").fadeIn(100);</span>
+  };
+&nbsp;
+  return page;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Nov 18 2016 18:18:38 GMT-0800 (PST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

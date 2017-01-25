@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/index/directions/osrm.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">js/index/directions/</a> osrm.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.51% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.7% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/46</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// OSRM car engine
+// Doesn't yet support hints
+&nbsp;
+function OSRMEngine() {
+  var cachedHints = [];
+&nbsp;
+  return {
+    id: "osrm_car",
+    creditline: '&lt;a href="http://project-osrm.org/" target="_blank"&gt;OSRM&lt;/a&gt;',
+    draggable: true,
+&nbsp;
+    _transformSteps: <span class="fstat-no" title="function not covered" >function(input_steps, line) {</span>
+<span class="cstat-no" title="statement not covered" >      var INSTRUCTION_TEMPLATE = {</span>
+        'continue': 'javascripts.directions.instructions.continue',
+        'merge right': 'javascripts.directions.instructions.merge_right',
+        'merge left': 'javascripts.directions.instructions.merge_left',
+        'off ramp right': 'javascripts.directions.instructions.offramp_right',
+        'off ramp left': 'javascripts.directions.instructions.offramp_left',
+        'on ramp right': 'javascripts.directions.instructions.onramp_right',
+        'on ramp left': 'javascripts.directions.instructions.onramp_left',
+        'fork right': 'javascripts.directions.instructions.fork_right',
+        'fork left': 'javascripts.directions.instructions.fork_left',
+        'end of road right': 'javascripts.directions.instructions.endofroad_right',
+        'end of road left': 'javascripts.directions.instructions.endofroad_left',
+        'turn straight': 'javascripts.directions.instructions.continue',
+        'turn slight right': 'javascripts.directions.instructions.slight_right',
+        'turn right': 'javascripts.directions.instructions.turn_right',
+        'turn sharp right': 'javascripts.directions.instructions.sharp_right',
+        'turn uturn': 'javascripts.directions.instructions.uturn',
+        'turn sharp left': 'javascripts.directions.instructions.sharp_left',
+        'turn left': 'javascripts.directions.instructions.turn_left',
+        'turn slight left': 'javascripts.directions.instructions.slight_left',
+        'trun straight': 'javascripts.directions.instructions.follow',
+        'roundabout': 'javascripts.directions.instructions.roundabout',
+        'rotary': 'javascripts.directions.instructions.roundabout',
+        'depart': 'javascripts.directions.instructions.start',
+        'arrive': 'javascripts.directions.instructions.destination',
+      };
+<span class="cstat-no" title="statement not covered" >      var ICON_MAP = {</span>
+        'continue': 0,
+        'merge right': 21,
+        'merge left': 20,
+        'off ramp right': 24,
+        'off ramp left': 25,
+        'on ramp right': 2,
+        'on ramp left': 6,
+        'fork right': 18,
+        'fork left': 19,
+        'end of road right': 22,
+        'end of road left': 23,
+        'turn straight': 0,
+        'turn slight right': 1,
+        'turn right': 2,
+        'turn sharp right': 3,
+        'turn uturn': 4,
+        'turn slight left': 5,
+        'turn left': 6,
+        'turn sharp left': 7,
+        'trun straight': 0,
+        'roundabout': 10,
+        'rotary': 10,
+        'depart': 8,
+        'arrive': 14
+      };
+<span class="cstat-no" title="statement not covered" >      var transformed_steps = input_steps.map(<span class="fstat-no" title="function not covered" >function(step, idx) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var maneuver_id;</span>
+&nbsp;
+        // special case handling
+<span class="cstat-no" title="statement not covered" >        switch (step.maneuver.type) {</span>
+          case 'on ramp':
+          case 'off ramp':
+          case 'merge':
+          case 'end of road':
+          case 'fork':
+<span class="cstat-no" title="statement not covered" >            maneuver_id = step.maneuver.type + ' ' + (step.maneuver.modifier.indexOf('left') &gt;= 0 ? 'left' : 'right');</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+          case 'depart':
+          case 'arrive':
+          case 'roundabout':
+          case 'rotary':
+<span class="cstat-no" title="statement not covered" >            maneuver_id = step.maneuver.type;</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+          case 'roundabout turn':
+          case 'turn':
+<span class="cstat-no" title="statement not covered" >            maneuver_id = "turn " + step.maneuver.modifier;</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+          // for unknown types the fallback is turn
+          default:
+<span class="cstat-no" title="statement not covered" >            maneuver_id = "turn " + step.maneuver.modifier;</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        var template = INSTRUCTION_TEMPLATE[maneuver_id];</span>
+&nbsp;
+        // convert lat,lng pairs to LatLng objects
+<span class="cstat-no" title="statement not covered" >        var step_geometry = L.PolylineUtil.decode(step.geometry, { precision: 5 }).map(<span class="fstat-no" title="function not covered" >function(a) {</span> <span class="cstat-no" title="statement not covered" >return L.latLng(a); </span>}) ;</span>
+        // append step_geometry on line
+<span class="cstat-no" title="statement not covered" >        Array.prototype.push.apply(line, step_geometry);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var instText = "&lt;b&gt;" + (idx + 1) + ".&lt;/b&gt; ";</span>
+<span class="cstat-no" title="statement not covered" >        var name = step.name ? "&lt;b&gt;" + step.name + "&lt;/b&gt;" : I18n.t('javascripts.directions.instructions.unnamed');</span>
+<span class="cstat-no" title="statement not covered" >        if (step.maneuver.type.match(/rotary|roundabout/)) {</span>
+<span class="cstat-no" title="statement not covered" >          instText += I18n.t(template + '_with_exit', { exit: step.maneuver.exit, name: name } );</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          instText += I18n.t(template + '_without_exit', { name: name });</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return [[step.maneuver.location[1], step.maneuver.location[0]], ICON_MAP[maneuver_id], instText, step.distance, step_geometry];</span>
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return transformed_steps;</span>
+    },
+&nbsp;
+    getRoute: <span class="fstat-no" title="function not covered" >function (points, callback) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var params = [</span>
+        { name: "overview", value: "false" },
+        { name: "geometries", value: "polyline" },
+        { name: "steps", value: true }
+      ];
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (cachedHints.length === points.length) {</span>
+<span class="cstat-no" title="statement not covered" >        params.push({name: "hints", value: cachedHints.join(";")});</span>
+      } else {
+        // invalidate cache
+<span class="cstat-no" title="statement not covered" >        cachedHints = [];</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var encoded_coords = points.map(<span class="fstat-no" title="function not covered" >function(p) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return p.lng + ',' + p.lat;</span>
+      }).join(';');
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var req_url = document.location.protocol + OSM.OSRM_URL + encoded_coords;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var onResponse = <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (data.code !== 'Ok')</span>
+<span class="cstat-no" title="statement not covered" >          return callback(true);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        cachedHints = data.waypoints.map(<span class="fstat-no" title="function not covered" >function(wp) {</span></span>
+<span class="cstat-no" title="statement not covered" >          return wp.hint;</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var line = [];</span>
+<span class="cstat-no" title="statement not covered" >        var transformLeg = <span class="fstat-no" title="function not covered" >function (leg) {</span></span>
+<span class="cstat-no" title="statement not covered" >          return this._transformSteps(leg.steps, line);</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var steps = [].concat.apply([], data.routes[0].legs.map(transformLeg.bind(this)));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        callback(false, {</span>
+          line: line,
+          steps: steps,
+          distance: data.routes[0].distance,
+          time: data.routes[0].duration
+        });
+      };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return $.ajax({</span>
+        url: req_url,
+        data: params,
+        dataType: "json",
+        success: onResponse.bind(this),
+        error: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >          callback(true);</span>
+        }
+      });
+    }
+  };
+}
+&nbsp;
+OSM.Directions.addEngine(new OSRMEngine(), true);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Nov 18 2016 18:18:38 GMT-0800 (PST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

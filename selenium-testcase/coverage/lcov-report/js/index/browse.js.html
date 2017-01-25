@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/index/browse.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">js/index/</a> browse.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.29% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/50</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</td><td class="line-coverage quiet"><span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">OSM.initializeBrowse = function (map) {
+  var browseBounds;
+  var selectedLayer;
+  var dataLayer = map.dataLayer;
+&nbsp;
+  dataLayer.setStyle({
+    way: {
+      weight: 3,
+      color: "#000000",
+      opacity: 0.4
+    },
+    area: {
+      weight: 3,
+      color: "#ff0000"
+    },
+    node: {
+      color: "#00ff00"
+    }
+  });
+&nbsp;
+  dataLayer.isWayArea = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+  };
+&nbsp;
+  dataLayer.on("click", <span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >    onSelect(e.layer);</span>
+  });
+&nbsp;
+  map.on('layeradd', function (e) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (e.layer === dataLayer) {
+<span class="cstat-no" title="statement not covered" >      map.on("moveend", updateData);</span>
+<span class="cstat-no" title="statement not covered" >      updateData();</span>
+    }
+  });
+&nbsp;
+  map.on('layerremove', function (e) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (e.layer === dataLayer) {
+<span class="cstat-no" title="statement not covered" >      map.off("moveend", updateData);</span>
+<span class="cstat-no" title="statement not covered" >      $('#browse_status').empty();</span>
+    }
+  });
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function updateData() {</span>
+<span class="cstat-no" title="statement not covered" >    var bounds = map.getBounds();</span>
+<span class="cstat-no" title="statement not covered" >    if (!browseBounds || !browseBounds.contains(bounds)) {</span>
+<span class="cstat-no" title="statement not covered" >      getData();</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function displayFeatureWarning(count, limit, add, cancel) {</span>
+<span class="cstat-no" title="statement not covered" >    $('#browse_status').html(</span>
+      $("&lt;p class='warning'&gt;&lt;/p&gt;")
+        .text(I18n.t("browse.start_rjs.feature_warning", { num_features: count, max_features: limit }))
+        .prepend(
+          $("&lt;span class='icon close'&gt;&lt;/span&gt;")
+            .click(cancel))
+        .append(
+          $("&lt;input type='submit'&gt;")
+            .val(I18n.t('browse.start_rjs.load_data'))
+            .click(add)));
+  }
+&nbsp;
+  var dataLoader;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function getData() {</span>
+<span class="cstat-no" title="statement not covered" >    var bounds = map.getBounds();</span>
+<span class="cstat-no" title="statement not covered" >    var url = "/api/" + OSM.API_VERSION + "/map?bbox=" + bounds.toBBoxString();</span>
+&nbsp;
+    /*
+     * Modern browsers are quite happy showing far more than 100 features in
+     * the data browser, so increase the limit to 2000 by default, but keep
+     * it restricted to 500 for IE8 and 100 for older IEs.
+     */
+<span class="cstat-no" title="statement not covered" >    var maxFeatures = 2000;</span>
+&nbsp;
+    /*@cc_on
+      if (navigator.appVersion &lt; 8) {
+        maxFeatures = 100;
+      } else if (navigator.appVersion &lt; 9) {
+        maxFeatures = 500;
+      }
+    @*/
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (dataLoader) <span class="cstat-no" title="statement not covered" >dataLoader.abort();</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    dataLoader = $.ajax({</span>
+      url: url,
+      success: <span class="fstat-no" title="function not covered" >function (xml) {</span>
+<span class="cstat-no" title="statement not covered" >        dataLayer.clearLayers();</span>
+<span class="cstat-no" title="statement not covered" >        selectedLayer = null;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var features = dataLayer.buildFeatures(xml);</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function addFeatures() {</span>
+<span class="cstat-no" title="statement not covered" >          $('#browse_status').empty();</span>
+<span class="cstat-no" title="statement not covered" >          dataLayer.addData(features);</span>
+<span class="cstat-no" title="statement not covered" >          browseBounds = bounds;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function cancelAddFeatures() {</span>
+<span class="cstat-no" title="statement not covered" >          $('#browse_status').empty();</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (features.length &lt; maxFeatures) {</span>
+<span class="cstat-no" title="statement not covered" >          addFeatures();</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          displayFeatureWarning(features.length, maxFeatures, addFeatures, cancelAddFeatures);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        dataLoader = null;</span>
+      }
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function onSelect(layer) {</span>
+    // Unselect previously selected feature
+<span class="cstat-no" title="statement not covered" >    if (selectedLayer) {</span>
+<span class="cstat-no" title="statement not covered" >      selectedLayer.setStyle(selectedLayer.originalStyle);</span>
+    }
+&nbsp;
+    // Redraw in selected style
+<span class="cstat-no" title="statement not covered" >    layer.originalStyle = layer.options;</span>
+<span class="cstat-no" title="statement not covered" >    layer.setStyle({color: '#0000ff', weight: 8});</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    OSM.router.route('/' + layer.feature.type + '/' + layer.feature.id);</span>
+&nbsp;
+    // Stash the currently drawn feature
+<span class="cstat-no" title="statement not covered" >    selectedLayer = layer;</span>
+  }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Nov 18 2016 18:18:38 GMT-0800 (PST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
